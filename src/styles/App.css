@@ -1,0 +1,19 @@
+:root{
+  --very-light-green:#D2DFBD;
+  --light-green: #A5C29F;
+  --dark-green:#458871;
+  --very-dark-green:#006B60;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.darkMode{
+  background-color:black;
+}
+lightMode{
+  background-color:white;
+}
