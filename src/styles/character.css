@@ -1,6 +1,7 @@
 .Characters{
     display: flex;
     flex-direction: column;
+    padding-bottom: 40px;
 }
 .characters-container {
     display: grid;
@@ -18,8 +19,17 @@
     width: 100%;
     padding-top: 5vh;
 }
-h3{
+.character-title{
     text-align: center;
-    font-size: 25px;
-    padding-top:3vh;
+    font-size: 35px;
+    margin-top:3vh;
+    padding: 5px;
+    background-color: #A5C29F;
+    width: 200px;
+    align-self: center;
+    border-radius: 15px;
+}
+.div-container-fav{
+    display: flex;
+    flex-direction: column;
 }

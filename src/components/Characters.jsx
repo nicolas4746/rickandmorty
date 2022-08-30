@@ -50,8 +50,8 @@ const Characters = () => {
     return (
         <div className="Characters">
             {favorites.favorites.length > 0 &&
-            <div>
-                <h3>Favoritos</h3>
+            <div className="div-container-fav">
+                <h3 className="character-title">Favoritos</h3>
                 <div className="Favorites-container">
                     {favorites.favorites.map(favorite=> (
                         <CharacterCardFavorites key={favorite.id} {...favorite} handleClickRemove={handleClickRemove}/>
@@ -59,7 +59,7 @@ const Characters = () => {
                 </div>
             </div>
             }
-            <h3>Personajes</h3>
+            <h3 className="character-title">Personajes</h3>
             <div className="characters-container">
                 {characters.map(character=> 
                   <CharacterCard key={character.id} {...character} handleClick={handleClick}/> )}

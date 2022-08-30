@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/characterCard.css'
+import '../styles/characterCardFavorites.css'
 const CharacterCardFavorites = ({image, name,species,handleClickRemove,id}) => {
     return (
         <div className="card">
@@ -9,7 +9,7 @@ const CharacterCardFavorites = ({image, name,species,handleClickRemove,id}) => {
             <article className="text-container">
                 <h2>{name}</h2>
                 <p>{species}</p>
-                <button type="button" onClick={()=>handleClickRemove(id)}>Eliminar de favoritos</button>
+                <button className="btn-del-fav" type="button" onClick={()=>handleClickRemove(id)}>Eliminar de favoritos</button>
             </article>
         </div>
     )

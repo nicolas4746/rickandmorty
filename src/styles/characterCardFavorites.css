@@ -1,6 +1,6 @@
 .card {
     min-height: 250px;
-    max-height: 400px;
+    max-height: 500px;
     border: 2px solid black;
     border-radius: 15px;
     display:flex;
@@ -23,9 +23,21 @@
 }
 .text-container{
     width: 100%;
-    height: 120px;
+    height: 150px;
     text-align: center;
     background-color: #A5C29F;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.btn-del-fav{
+    background-color: #D2DFBD;
+    padding: 1px 7px;
+    border-radius: 8px;
+    border: 1px solid black;
+    margin:5px 0;
+    cursor: pointer;
 }

@@ -9,7 +9,7 @@ const CharacterCard = ({image, name,species,handleClick,id}) => {
             <article className="text-container">
                 <h2>{name}</h2>
                 <p>{species}</p>
-                <button type="button" onClick={()=>handleClick({image, name, species,id})}>agregar a favoritos</button>
+                <button className="btn-add-fav"type="button" onClick={()=>handleClick({image, name, species,id})}>agregar a favoritos</button>
             </article>
         </div>
     )
