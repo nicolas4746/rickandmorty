@@ -1,5 +1,11 @@
 .header{
     text-align: center;
-    background-color:var(--very-light-green);
     padding-bottom: 2vh;
+    background-color:#A5C29F;
+}
+.header-button{
+    padding: 5px 10px;
+    background-color:rgba(186, 184, 184, 0.584);
+    border-radius: 10px;
+    border: 2px solid gray;
 }

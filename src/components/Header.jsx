@@ -3,6 +3,7 @@ import ThemeContext from '../context/ThemeContext';
 import "../styles/Header.css"
 const Header = () => {
     const [darkMode, setDarkMode] = useState(false);
+    
     const {theme, updateTheme} = useContext(ThemeContext);
     
     const handleClick = () => {
@@ -11,8 +12,8 @@ const Header = () => {
     };
     return (
         <div className="header">
-            <h1>ReactHooks</h1>
-            <button type="button" onClick={handleClick}>
+            <h1>Rick and Morty</h1>
+            <button className='header-button' type="button" onClick={handleClick}>
                 {darkMode ? 'Dark Mode' : 'Light Mode'}
             </button>
         </div>

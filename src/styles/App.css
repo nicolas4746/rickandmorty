@@ -12,8 +12,12 @@
   box-sizing: border-box;
 }
 .darkMode{
-  background-color:black;
+  background-color:#006B60;
+  color: black;
+  text-shadow: 2px 2px 2px white;
 }
-lightMode{
-  background-color:white;
+.lightMode{
+  background-color:#D2DFBD;
+  color: white;
+  text-shadow: 2px 2px 2px black;
 }
