@@ -1,0 +1,16 @@
+.characterNotFound{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.characterNotFound p {
+    margin-top: 50px;
+    font-size: 30px;
+    background-color: #A5C29F;
+    width: fit-content;
+    height:fit-content;
+    border-radius: 15px;
+    padding: 10px;
+    font-weight: bold;
+}

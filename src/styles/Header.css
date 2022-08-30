@@ -2,10 +2,15 @@
     text-align: center;
     padding-bottom: 2vh;
     background-color:#A5C29F;
+    padding-top: 2vh;
+}
+.header h1{
+    font-size: 45px;
 }
 .header-button{
     padding: 5px 10px;
     background-color:rgba(186, 184, 184, 0.584);
     border-radius: 10px;
     border: 2px solid gray;
+    margin-top: 2vh;
 }

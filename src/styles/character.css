@@ -1,7 +1,6 @@
 .Characters{
     display: flex;
     flex-direction: column;
-    padding-bottom: 40px;
 }
 .characters-container {
     display: grid;
@@ -10,6 +9,7 @@
     gap: 26px;
     width: 100%;
     padding-top: 5vh;
+    padding-bottom: 40px;
 }
 .Favorites-container {
     display: grid;
@@ -32,4 +32,17 @@
 .div-container-fav{
     display: flex;
     flex-direction: column;
+}
+.search-input-container{
+    display: flex;
+    justify-content:center;
+}
+.search-input-container input{
+    margin-top:30px;    
+    padding: 10px 30px;
+    background-color: #A5C29F;
+    border-radius: 10px;
+    border: 2px solid #006B60;
+    font-size: 20px;
+    text-align: center;
 }

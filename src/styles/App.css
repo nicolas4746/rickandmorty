@@ -14,10 +14,10 @@
 .darkMode{
   background-color:#006B60;
   color: black;
-  text-shadow: 2px 2px 2px white;
+  text-shadow: 2px 2px 2px #D2DFBD;
 }
 .lightMode{
   background-color:#D2DFBD;
   color: white;
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 2px 2px 2px #458871;
 }

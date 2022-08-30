@@ -2,7 +2,7 @@ import React, {useState, useEffect, useReducer, useMemo} from 'react'
 import CharacterCard from './CharacterCard';
 import CharacterCardFavorites from './CharacterCartFavorites';
 import '../styles/character.css'
-
+import CharacterNotFound from './CharacterNotFound';
 const initialState = {
     favorites: [],
 }
@@ -77,14 +77,20 @@ const Characters = () => {
             </div>
             }
             <h3 className="character-title">Personajes</h3>
-            <div>
-                <input type="text" value={search} onChange={handleSearch}/>
+            <div className='search-input-container'>
+                <input placeholder='busque su personaje' type="text" value={search} onChange={handleSearch}/>
             </div>
-
-            <div className="characters-container">
+            {filteredUsers.length >0 && 
+                <div className="characters-container">
                 {filteredUsers.map(character=> 
                   <CharacterCard key={character.id} {...character} handleClick={handleClick}/> )} 
+                </div>
+            }
+            {filteredUsers.length <1 && 
+            <div className='search-not-found'>
+                <CharacterNotFound/>
             </div>
+            }
        </div> 
     );
 }
