@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/characterCard.css'
-const CharacterCard = ({image, name,species,handleClick,id}) => {
+const CharacterCardFavorites = ({image, name,species,handleClickRemove,id}) => {
     return (
         <div className="card">
             <figure className="img-container">
@@ -9,10 +9,10 @@ const CharacterCard = ({image, name,species,handleClick,id}) => {
             <article className="text-container">
                 <h2>{name}</h2>
                 <p>{species}</p>
-                <button type="button" onClick={()=>handleClick({image, name, species,id})}>agregar a favoritos</button>
+                <button type="button" onClick={()=>handleClickRemove(id)}>Eliminar de favoritos</button>
             </article>
         </div>
     )
 }
 
-export default CharacterCard;
+export default CharacterCardFavorites;
