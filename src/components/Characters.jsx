@@ -1,8 +1,10 @@
-import React, {useState, useEffect, useReducer, useMemo} from 'react'
+import React, {useState, useEffect, useReducer, useMemo, useRef, useCallback} from 'react'
 import CharacterCard from './CharacterCard';
 import CharacterCardFavorites from './CharacterCartFavorites';
 import '../styles/character.css'
 import CharacterNotFound from './CharacterNotFound';
+import Search from './Search';
+
 const initialState = {
     favorites: [],
 }
@@ -28,17 +30,19 @@ const favoriteReducer = (state, action) => {
     }
 }
 
-const Characters = () => {
-       
+const Characters = () => {   
     const [characters, setCharacters] = useState([]);
-    
     const [favorites, dispatch] = useReducer(favoriteReducer, initialState);
-
     const[search,setSearch] = useState('');
+    const searchInput = useRef(null);
 
-    const handleSearch = (event) => {
-        setSearch(event.target.value)
-    }
+   /*  const handleSearch = () => {
+        setSearch(searchInput.current.value)
+    } */
+    const handleSearch = useCallback( ()=>{
+        setSearch(searchInput.current.value)
+    }, []);
+
 
     useEffect(() =>{
         fetch('https://rickandmortyapi.com/api/character/')
@@ -53,9 +57,6 @@ const Characters = () => {
         dispatch({ type: 'REMOVE_FAVORITE', payload: id })
     }
 
-   /*  const filteredUsers = characters.filter((user)=>{
-        return user.name.toLowerCase().includes(search.toLowerCase());
-    }); */
     const filteredUsers = useMemo(() =>
     characters.filter((user) => {
       return user.name.toLowerCase().includes(search.toLowerCase());
@@ -77,9 +78,7 @@ const Characters = () => {
             </div>
             }
             <h3 className="character-title">Personajes</h3>
-            <div className='search-input-container'>
-                <input placeholder='busque su personaje' type="text" value={search} onChange={handleSearch}/>
-            </div>
+            <Search search={search} searchInput={searchInput} handleSearch={handleSearch} />
             {filteredUsers.length >0 && 
                 <div className="characters-container">
                 {filteredUsers.map(character=> 
